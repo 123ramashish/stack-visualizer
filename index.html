@@ -1,0 +1,100 @@
+<!-- This line declares the document type and defines the HTML version being used. -->
+<!DOCTYPE html>
+
+<!-- This line starts the HTML document and sets the language attribute to English. -->
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Stack Visualizer</title>
+
+	<!-- This line links an external CSS file named "style.css" to the HTML document. -->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<!-- This heading displays the title of the application. -->
+		<h1 class="title">Stack Visualizer</h1>
+	</header>
+
+	<!-- This div serves as the main container for the application content. -->
+	<div class="container">
+		<!-- This div contains the input elements and buttons for stack operations. -->
+		<div class="container-header">
+			<!-- This input element allows users to enter numbers. -->
+			<input type="number" class="text" required>
+
+			<!-- This button triggers the push operation. -->
+			<button class="push">Push</button>
+
+			<!-- This button triggers the pop operation. -->
+			<button class="pop">Pop</button>
+
+			<!-- This button triggers the reset operation. -->
+			<button class="reset">Reset</button>
+		</div>
+
+		<!-- This div contains the main body of the stack visualizer. -->
+		<div class="container-body">
+			<!-- This div represents the stack area where items are displayed. -->
+			<div class="stack">
+				<!-- This div holds the stack items. -->
+				<div class="main-stack-bucket"></div>
+			</div>
+
+			<!-- This div displays information about the stack. -->
+			<div class="info">
+				<!-- This div contains the top element of the stack. -->
+				<div class="sec1">
+					<!-- This heading indicates the top of the stack. -->
+					<h3>Top of the Stack:-</h3>
+					<!-- This button displays the top element of the stack. -->
+					<button class="box stack-top"></button>
+				</div>
+
+				<!-- This div contains the last pushed item. -->
+				<div class="sec2">
+					<!-- This heading indicates the last pushed item. -->
+					<h3>Last Pushed Item:-</h3>
+					<!-- This button displays the last pushed item. -->
+					<button class="box last-pushed"></button>
+				</div>
+
+				<!-- This div contains the last popped item. -->
+				<div class="sec3">
+					<!-- This heading indicates the last popped item. -->
+					<h3>Last Popped Item:-</h3>
+					<!-- This button displays the last popped item. -->
+					<button class="box last-poped"></button>
+				</div>
+
+				<!-- This div contains the size of the stack. -->
+				<div class="sec3">
+					<!-- This heading indicates the size of the stack. -->
+					<h3>Size of the Stack:-</h3>
+					<!-- This button displays the size of the stack. -->
+					<button class="box stack-size"></button>
+				</div>
+
+				<!-- This div represents the message box for displaying feedback messages. -->
+				<div class="massage-box">
+					<!-- This heading displays the title of the message box. -->
+					<h2>Massage Box</h2>
+					<!-- This div displays the actual messages. -->
+					<div class="massage"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- This script tag links an external JavaScript file named "script.js" to the HTML document. -->
+	<script src="script.js"></script>
+</body>
+
+</html>

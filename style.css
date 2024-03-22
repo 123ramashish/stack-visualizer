@@ -1,0 +1,229 @@
+/* This line imports the Google Font "Poppins" with various weights and styles to be used in the document. */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* This section sets up global styles and resets default margin, padding, and box-sizing. It also defines the font-family for the entire document. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* This section styles the body of the document, setting its dimensions, flex layout, background color, and gap between elements. */
+body {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(231, 231, 231);
+}
+
+/* This section styles the header, including its dimensions, layout, and color. */
+header {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* This section styles the container holding the main content, setting its dimensions, background color, shadow, and border radius. */
+.container {
+  height: 620px;
+  width: 1000px;
+  background-color: white;
+  box-shadow: 8px 8px 20px rgb(128, 128, 128);
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* This section styles the header of the container, including its dimensions, layout, and margins. */
+.container-header {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* This section styles the input element within the container header, setting its dimensions, font size, border radius, and padding. */
+.container-header input {
+  height: 50px;
+  width: 400px;
+  font-size: 25px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+/* This section styles buttons for push, pop, reset operations and stack elements, setting their dimensions, font size, background color, border radius, cursor, and transition. */
+.push,
+.pop,
+.reset,
+.box {
+  height: 50px;
+  width: 140px;
+  font-size: 25px;
+  background-color: #5795f1;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  border: none;
+}
+
+/* This class styles disabled buttons, changing their background color and text color. */
+.disable-button {
+  background-color: #5795f1;
+  color: rgb(109, 108, 108);
+}
+
+/* This section styles the behavior of buttons when they are clicked, applying a scale transformation. */
+.container-header button:active {
+  transform: scale(0.95);
+}
+
+/* This section styles the container body, setting its width, flex layout, and alignment. */
+.container-body {
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* This section styles the stack area, setting its dimensions, border, and alignment. */
+.stack {
+  width: 500px;
+  height: 470px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 0 3px 0 0;
+  border-color: black;
+  border-style: solid;
+}
+
+/* This section styles the main stack bucket, including its dimensions, border, radius, alignment, and animation. */
+.main-stack-bucket {
+  height: 450px;
+  width: 200px;
+  border-width: 0 4px 4px 4px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 5px;
+  padding-bottom: 5px;
+}
+
+/* This section styles individual stack elements, setting their dimensions, background color, border, radius, font size, and alignment. */
+.ele {
+  height: 80px;
+  width: 170px;
+  background-color: rgb(0, 59, 0);
+  color: white;
+  border: 4px black solid;
+  border-radius: 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* These classes define animations for adding and removing stack elements. */
+.ele-add {
+  animation: pushAnimation 0.3s infinite linear;
+}
+.ele-remove {
+  animation: popAnimation 0.3s infinite linear;
+}
+
+/* These keyframes define animations for adding and removing stack elements, changing their background color. */
+@keyframes pushAnimation {
+  0% {
+    background-color: rgb(0, 59, 0);
+  }
+  100% {
+    background-color: rgb(17, 92, 255);
+  }
+}
+@keyframes popAnimation {
+  0% {
+    background-color: rgb(0, 59, 0);
+  }
+  100% {
+    background-color: #f17357;
+  }
+}
+
+/* This section styles the information section, setting its dimensions, padding, and alignment. */
+.info {
+  height: 470px;
+  width: 500px;
+  padding-left: 20px;
+}
+
+/* This section styles various sections within the information section, setting their layout, alignment, and margins. */
+[class^="sec"] {
+  display: flex;
+  width: 350px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+/* This section styles the massage box, including its dimensions, margins, padding, border radius, background color, and layout. */
+.massage-box {
+  height: 180px;
+  width: 400px;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* This section styles the heading of the massage box, setting its alignment and font weight. */
+.massage-box h2 {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* This section styles the message display area, setting its height, alignment, font size, and animation. */
+.massage {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* This class defines an animation for error messages, changing their background color. */
+.error-massage {
+  animation: errorMassage 0.4s infinite linear;
+}
+
+/* These keyframes define animations for error messages, changing their background color. */
+@keyframes errorMassage {
+  0% {
+    background-color: bisque;
+  }
+  100% {
+    background-color: #f17357;
+  }
+}
